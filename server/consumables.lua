@@ -282,6 +282,11 @@ end
 
 exports('AddAlcohol', addAlcohol)
 
+QBCore.Functions.CreateUseableItem("foldable-chair", function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+	TriggerClientEvent("chairs:getChair", source)
+end)
+
 ---Checks if item already exists in the table. If not, it creates it.
 ---@param itemName string name of item
 ---@param data number amount it replenishes
